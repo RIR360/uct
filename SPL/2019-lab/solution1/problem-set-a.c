@@ -120,7 +120,7 @@ int main()
 
 
 // (5) Determine and calculate the sum of following harmonic series.
-Series form: (1/x^x + ...)
+// Series form: (1/x^x + ...)
 
 #include <stdio.h>
 #include <math.h>
