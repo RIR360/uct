@@ -74,7 +74,7 @@ int main()
 
 
 // (2) Evaluate the expression using user defined functions.
-Series: x - x^3/3! + x^5/5! - x^7/7! ...
+// Series: x - x^3/3! + x^5/5! - x^7/7! ...
 
 #include <stdio.h>
 
