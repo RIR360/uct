@@ -210,7 +210,48 @@ int main()
 
 // (5) Copy the elements of one file into another
 
+#include <stdio.h>
 
+int main()
+{
+    char mainfn[100], copyfn[100];
+    
+    printf("Enter the file to copy: ");
+    scanf("%s", mainfn);
+    
+    FILE *mainfile = fopen(mainfn, "r");
+    if (mainfile == NULL)
+    {
+        printf("Can't read %s.\n", mainfn);
+        return 1;
+    }
+    
+    printf("Enter the name of copy file: ");
+    scanf("%s", copyfn);
+    
+    FILE *copyfile = fopen(copyfn, "w");
+    if (copyfile == NULL)
+    {
+        printf("Can't write %s.\n", copyfile);
+        return 1;
+    }
+    
+    char ch;
+    do {
+        ch = fgetc(mainfile);
+        fprintf(copyfile, "%c", ch);
+    } while (ch != EOF);
+    
+    fclose(mainfile);
+    fclose(copyfile);
+    
+    printf("File copied as %s.\n", copyfn);
+    
+    return 0;
+}
+
+
+// (6) Read data from keyboard write it to the input file, read data from the same file and print to the console
 
 
 
