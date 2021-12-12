@@ -178,6 +178,41 @@ int main()
 }
 
 
+// (4) Calculate the sum of the numbers of an array using pointers
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i, sum = 0;
+    
+    printf("Enter the size of array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    int *ptr = arr;
+    
+    printf("Enter the Elements of array: ");
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    
+    for(i = 0; i < n; i++)
+    {
+        sum += *ptr;
+        ptr++;
+    }
+    printf("Sum of the array: %d\n", sum);
+    return 0;
+}
+
+
+// (5) Copy the elements of one file into another
+
+
+
+
 
 
 
