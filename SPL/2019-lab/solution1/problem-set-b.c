@@ -251,11 +251,45 @@ int main()
 }
 
 
-// (6) Read data from keyboard write it to the input file, read data from the same file and print to the console
+// (6) Read data from keyboard write it to the INPUT.txt file, read data from the same file and print to the console
 
+#include <stdio.h>
+#include <stdlib.h>
 
+int main() {
+    
+    char text[1000], ch;
 
+    FILE *fptr1 = fopen("INPUT.txt", "w");
+    if (fptr1 == NULL) {
+        printf("Can't write a file.\n");
+        return 1;
+    }
+    
+    printf("Enter a text: ");
+    gets(text);
+    
+    fprintf(fptr1, text);
+    fclose(fptr1);
 
+    FILE *fptr2 = fopen("INPUT.txt","r");
+    if(fptr2 == NULL)
+    {
+        printf("Can't read INPUT file.\n");
+        return 1;
+    }
+
+    do
+    {
+        ch = fgetc(fptr2);
+        putchar(ch);
+    } while(ch != EOF);
+
+    fclose(fptr2);
+    return 0;
+}
+
+// (6) store the following data into the INVENTORY file. then read the file again and display the values
 
 
 
