@@ -104,6 +104,7 @@ float calculate(int x, int n)
         else
             sum += x^(2 * i - 1)/factorial(2 * i - 1);
     }
+    return sum;
 }
 
 int factorial(int n)
@@ -117,7 +118,7 @@ int factorial(int n)
 }
 
 
-// (3) Using array of structures read the number of three subjects for n students and sort them according to their position.
+// (3) Using an array of structures read the number of three subjects for n students and sort them according to their position.
 
 #include <stdio.h>
 
