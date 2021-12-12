@@ -289,8 +289,62 @@ int main() {
     return 0;
 }
 
-// (6) store the following data into the INVENTORY file. then read the file again and display the values
+// (7) store the following data into the INVENTORY file. then read the file again and display the values
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    
+    
+    int i, n, number, quantity;
+    float price;
+    char name[20], ch;
+
+    FILE *fptr1 = fopen("INVENTORY.txt", "w");
+    if (fptr1 == NULL) {
+        printf("Can't write a file.\n");
+        return 1;
+    }
+    fprintf(fptr1, "Item Name\tNumber\tPrice\tQuantity\n");
+    
+    printf("Enter the number of items: ");
+    scanf("%d", &n);
+    
+    for (i = 0; i < n; i++)
+    {
+        printf("\nItem-%d info.\n", i + 1);
+        printf("Item Name: ");
+        scanf("%s", name);
+        printf("Number: ");
+        scanf("%d", &number);
+        printf("Price: ");
+        scanf("%f", &price);
+        printf("quantity: ");
+        scanf("%d", &quantity);
+        
+        fprintf(fptr1, "%s\t\t%d\t%2.f\t%d\n", name, number, price, quantity);
+    }
+    
+    printf("\nWritten file successfully.\n\n");
+    fclose(fptr1);
+    
+    printf("YOUR INVENTORY:\n");
+    FILE *fptr2 = fopen("INVENTORY.txt", "r");
+    if (fptr2 == NULL)
+    {
+        printf("Can't read INVENTORY file.\n");
+        return 1;
+    }
+    
+    do {
+        ch = fgetc(fptr2);
+        printf("%c", ch);
+    } while (ch != EOF);
+    
+    fclose(fptr2);
+    return 0;
+}
 
 
 
