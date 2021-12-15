@@ -283,7 +283,7 @@ int main() {
     do
     {
         ch = fgetc(fptr2);
-        putchar(ch);
+        printf("%c", ch);
     } while(ch != EOF);
 
     fclose(fptr2);
