@@ -1,26 +1,40 @@
+/*
 >>>>> 2020 <<<<<
 >>>>> Section A <<<<<
 >>>>> Written by: RIR360 <<<<<
+*/
 
-(1) Calculate the area of a circle.
+// (1) Calculate the first m fibonacci numbers using a do-while loop.
 
 #include <stdio.h>
 
 int main()
 {
-  float radius, area;
-
-  printf("Enter the radius of a circle\n");
-  scanf("%f", &radius);
-
-  area = 3.14159*radius*radius;
-
-  printf("Area of the circle = %.2f\n", area); 
-  return 0;
+    int m, i;
+    int n1, n2, n3;
+    
+    printf("Show fibonacci numbers of: ");
+    scanf("%d", &m);
+    
+    i = 2; 
+    n1 = 0;
+    n2 = 1;
+    
+    printf("Fibonacci Series: ");
+    printf("0 1");
+    do {
+        n3 = n1 + n2;
+        printf(" %d", n3);
+        n1 = n2;
+        n2 = n3;
+        i++;
+    } while (i < m);
+    
+    return 0;
 }
 
 
-(2) Find all possible roots of a quardratic equation.
+// (2) Find all possible roots of a quardratic equation.
 
 #include <math.h>
 #include <stdio.h>
@@ -61,7 +75,7 @@ int main() {
 } 
 
 
-(3) Reverse the digits of an integer number using while loop.
+// (3) Reverse the digits of an integer number using while loop.
 
 #include <stdio.h>
 
@@ -81,7 +95,7 @@ int main() {
 }
 
 
-(4) Convert any integer to it's binary equivalent.
+// (4) Convert any integer to it's binary equivalent.
 
 #include <stdio.h>
 
@@ -105,8 +119,8 @@ int main()
 }
 
 
-(5) Determine and calculate the sum of following harmonic series.
-Series form: (1/x^x + ...)
+// (5) Determine and calculate the sum of following harmonic series.
+// Series form: (1/x^x + ...)
 
 #include <stdio.h>
 #include <math.h>
@@ -130,7 +144,7 @@ int main()
 }
 
 
-(6) Compute the sum of the digits of a given number.
+// (6) Compute the sum of the digits of a given number.
 
 #include <stdio.h>
 
@@ -154,7 +168,7 @@ int main()
 }
 
 
-(7) Check whether a string is palindrome or not.
+// (7) Check whether a string is palindrome or not.
 
 #include <stdio.h>
 #include <string.h>
