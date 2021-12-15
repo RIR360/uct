@@ -1,7 +1,7 @@
 /*
 >>>>> 2020 <<<<<
 >>>>> Section A <<<<<
->>>>> Written by: Rizvy | @RIR360 <<<<<
+>>>>> Written by: Rizvy | RIR360 <<<<<
 */
 
 // (1) Calculate the first m fibonacci numbers using a do-while loop.
