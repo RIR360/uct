@@ -4,35 +4,21 @@
 >>>>> Written by: Rizvy | RIR360 <<<<<
 */
 
-// (1) Calculate the first m fibonacci numbers using a do-while loop.
+// (1) Calculate the readius of a circle
 
 #include <stdio.h>
-
 int main()
 {
-    int m, i;
-    int n1, n2, n3;
-    
-    printf("Show fibonacci numbers of: ");
-    scanf("%d", &m);
-    
-    i = 2; 
-    n1 = 0;
-    n2 = 1;
-    
-    printf("Fibonacci Series: ");
-    printf("0 1");
-    do {
-        n3 = n1 + n2;
-        printf(" %d", n3);
-        n1 = n2;
-        n2 = n3;
-        i++;
-    } while (i < m);
-    
-    return 0;
-}
+  float radius, area;
 
+  printf("Enter the radius of a circle: ");
+  scanf("%f", &radius);
+
+  area = 3.14159*radius*radius;
+
+  printf("Area = %.2f\n", area);
+  return 0;
+}
 
 // (2) Find all possible roots of a quardratic equation.
 
