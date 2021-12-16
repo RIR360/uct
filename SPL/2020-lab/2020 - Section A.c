@@ -22,8 +22,8 @@ int main()
 
 // (2) Find all possible roots of a quardratic equation.
 
-#include <math.h>
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     
@@ -66,13 +66,13 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    int n, rev = 0, remainder;
+    int n, rev = 0, rem;
     printf("Enter an integer: ");
     scanf("%d", &n);
     
     while (n != 0) {
-        remainder = n % 10;
-        rev = rev * 10 + remainder;
+        rem = n % 10;
+        rev = rev * 10 + rem;
         n /= 10;
     }
     
@@ -87,18 +87,18 @@ int main() {
 
 int main()
 {
-	int a[10], n, i;
+	int bits[16], n, i;
 	printf("Enter the number to convert: ");
 	scanf("%d", &n);
 	for (i = 0; n > 0; i++)
 	{
-		a[i] = n % 2;
+		bits[i] = n % 2;
 		n = n / 2;
 	}
 	printf("Binary form: ");
 	for (i = i - 1; i >= 0; i--)
 	{
-		printf("%d ", a[i]);
+		printf("%d ", bits[i]);
 	}
 
 	return 0;
