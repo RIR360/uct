@@ -5,13 +5,11 @@
 */
 
 
-// (1) Multiply two matrices
-
 #include <stdio.h>
 
 int main()
 {
-    int n, m, n1, m1;
+    int n, m, n1, m1, i, j, k;
     
     printf("Enter first matrix rows and columns: ");
     scanf("%d%d", &n, &m);
@@ -20,8 +18,8 @@ int main()
     // taking user input
     
     printf("Enter Matrix(%dX%d):\n", n, m);
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
             scanf("%d", &mat1[i][j]);
         }
     }
@@ -37,8 +35,8 @@ int main()
     }
     
     printf("Enter Matrix(%dX%d):\n", n1, m1);
-    for (int i = 0; i < n1; i++) {
-        for (int j = 0; j < m1; j++) {
+    for (i = 0; i < n1; i++) {
+        for (j = 0; j < m1; j++) {
             scanf("%d", &mat2[i][j]);
         }
     }
@@ -48,9 +46,9 @@ int main()
     int mat3[n][m1];
     int sum = 0;
     
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m1; j++) {
-            for (int k = 0; k < m; k++)
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m1; j++) {
+            for (k = 0; k < m; k++)
             {
                 sum += mat1[i][k] * mat2[k][j];
             }
@@ -62,8 +60,8 @@ int main()
     // displaying output matrix
     
     printf("Output Matrix(%dX%d): \n", n, m1);
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m1; j++) {
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m1; j++) {
             printf("%d ", mat3[i][j]);
         }
         printf("\n");
