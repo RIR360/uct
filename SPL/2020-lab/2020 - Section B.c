@@ -322,7 +322,7 @@ int main() {
         printf("quantity: ");
         scanf("%d", &quantity);
         
-        fprintf(fptr1, "%s\t\t%d\t%2.f\t%d\n", name, number, price, quantity);
+        fprintf(fptr1, "%s\t\t%d\t%.2f\t%d\n", name, number, price, quantity);
     }
     
     printf("\nWritten file successfully.\n\n");
