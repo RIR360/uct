@@ -77,6 +77,7 @@ int main()
 // Series: x - x^3/3! + x^5/5! - x^7/7! ...
 
 #include <stdio.h>
+#include <math.h>
 
 float calculate(int x, int n);
 int factorial(int n);
@@ -100,9 +101,9 @@ float calculate(int x, int n)
     for(i = 1; i <= n; i++)
     {
         if (i % 2 == 0)
-            sum -= x^(2 * i - 1)/factorial(2 * i - 1);
+            sum -= pow(x, 2 * i - 1)/factorial(2 * i - 1);
         else
-            sum += x^(2 * i - 1)/factorial(2 * i - 1);
+            sum += pow(x, 2 * i - 1)/factorial(2 * i - 1);
     }
     return sum;
 }
@@ -110,12 +111,11 @@ float calculate(int x, int n)
 int factorial(int n)
 {
     int i, fact = 1;
-    for (i = 2; i <= n; i++)
-    {
-        fact *= i;
-    }
+    for (i = 2; i <= n; i++) 
+        fact *= i; 
     return fact;
 }
+
 
 
 // (3) Using an array of structures read the number of three subjects for n students and sort them according to their position.
