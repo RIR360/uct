@@ -291,7 +291,6 @@ int main() {
 // (7) store the following data into the INVENTORY file. then read the file again and display the values
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
     
